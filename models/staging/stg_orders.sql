@@ -2,11 +2,14 @@ SELECT
 -- from raw_orders
 o.ORDERID, o.ORDERDATE, o.SHIPDATE, o.SHIPMODE,
 o.ordersellingprice - o.ordercostprice as orderprofit,
+o.ordercostprice,
+o.ordersellingprice,
 -- from raw_customer
 c.customername,
 c.segment,
 c.country,
 -- from raw_product
+p.productid,
 p.category,
 p.productname,
 p.subcategory
