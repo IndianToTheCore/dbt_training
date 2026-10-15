@@ -14,6 +14,7 @@ p.productid,
 p.category,
 p.productname,
 p.subcategory
+{{ markup() }} as markup   
 from {{ ref('raw_orders') }} as o
 LEFT JOIN {{ ref('raw_customer') }} as c 
 on o.customerID = c.customerid 
